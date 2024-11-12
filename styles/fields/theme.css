@@ -1,0 +1,47 @@
+label + .radio-wrapper {
+  margin-top: 1rem;
+}
+
+.theme-wrapper{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+  gap: 1rem;
+}
+
+.theme-inner {
+  .theme-image img {
+    display: block;
+  }
+
+  label {
+    margin-block: 8px;
+    text-align: center;
+    color: var(--text-heading);
+  }
+
+  padding: .25rem;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  background-color: var(--shape-button);
+  border-radius: .5rem;
+
+
+  position: relative;
+  & input,
+  & input:focus,
+  & input:hover {
+    all:unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  &:hover {
+    background-color: var(--shape-hover);
+  }
+
+  &:has(:checked) {
+    border: 3px solid var(--brand-light);  
+  }
+}

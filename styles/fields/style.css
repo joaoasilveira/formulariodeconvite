@@ -1,0 +1,60 @@
+.style-wrapper {
+  display: flex;
+  padding-top: .75rem;
+  gap: 1rem;
+}
+
+/* Esconde o checkbox */
+.toggle-checkbox {
+  display: none;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  display: flex;
+  align-items: center;
+  padding: 3px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.toggle-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--input-stroke);
+  transition: transform 0.3s;
+}
+
+/* Quando o checkbox está marcado (modo claro) */
+.toggle-checkbox:checked + .toggle-switch {
+  background-color: var(--brand-light);
+}
+
+.toggle-checkbox:checked + .toggle-switch .toggle-circle {
+  transform: translateX(24px);
+  background-color: var(--text-heading);
+}
+
+/* Texto Dinâmico */
+.theme-text {
+  padding: .25rem;
+  font: var(--body-sm);
+  color: var(--text-heading);
+  transition: color 0.3s;
+}
+
+/* Troca o texto para "Claro" quando o checkbox está marcado */
+.toggle-checkbox:checked ~ .theme-text::before {
+  content: "Claro";
+}
+
+.toggle-checkbox:not(:checked) ~ .theme-text::before {
+  content: "Escuro";
+}

@@ -1,0 +1,52 @@
+.segment-wrapper {
+  background-color: var(--input-base);
+  border: 1px solid var(--input-stroke);
+  display: flex;
+  gap: .25rem;
+  border-radius: .5rem;
+  padding: .25rem;
+}
+
+
+.segment-inner {
+  cursor: pointer;
+  border-radius: .5rem;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 18px;
+
+  position: relative;
+  & input {
+    all:unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    stroke:var(--text-body);
+  }
+
+  span {
+    font: var(--body-sm);
+    color: var(--text-body);
+  }
+
+  &:has(:checked) {
+    background-color: var(--shape-button);
+
+    span {
+      font-weight: 600 ;
+      color: var(--text-heading);
+    }
+    
+    svg {
+      stroke:var(--brand-light);
+    }
+  }
+}
+

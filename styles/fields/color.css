@@ -1,0 +1,26 @@
+.color-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.color-inner {
+  height: 45px;
+  cursor: pointer;
+  position: relative;
+  & input {
+    all:unset;
+    position: absolute;
+    inset: 0;
+  }
+
+  &:hover {
+    svg rect:first-of-type {
+      fill: #383D42;
+    }
+  }
+
+  &:has(:checked) {
+    border-radius: 50%;
+    border: 3px solid var(--brand-light);  
+  }
+}

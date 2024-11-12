@@ -1,0 +1,32 @@
+.cover-wrapper {
+  label {
+    margin-bottom: 1rem;
+  }
+}
+.cover-button {
+  display: flex;
+  background-color: var(--shape-button);
+  padding-left: .75rem;
+  padding-top: .675rem;
+  border-radius: .5rem;
+  height: 40px;
+  width: 119px;
+  gap: .5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--shape-hover);
+  }
+}
+
+input[type="file"]{
+  display: none;
+}
+
+.cover-select {
+  border-radius: .5rem;
+  font: var(--body-sm);
+  font-weight: 500;
+  color: var(--text-heading);
+  cursor: pointer;
+}

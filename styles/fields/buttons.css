@@ -1,0 +1,27 @@
+button {
+  all: unset;
+  font-weight: 500;
+  padding: 0.875rem 1.25rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  
+  &.btn-primary {
+    margin-left: auto;
+    color: var(--text-heading);
+    background-color: var(--brand-dark);
+
+    display: flex;
+    align-items: center;
+    gap: .875rem;
+    
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover,
+    &:focus-within {
+      background-color: var(--brand-mid);
+    }
+  }
+}
